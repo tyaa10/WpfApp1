@@ -24,5 +24,10 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        private void mainButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainLabel.Content = "New content";
+        }
     }
 }
