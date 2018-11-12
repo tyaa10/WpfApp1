@@ -27,7 +27,14 @@ namespace WpfApp1
 
         private void mainButton_Click(object sender, RoutedEventArgs e)
         {
-            mainLabel.Content = "New content";
+            //mainLabel.Content = "New content";
+            mainLabel.Content = mainTextBox.Text;
+        }
+
+        private void cSControlsButton_Click(object sender, RoutedEventArgs e)
+        {
+            CSControlsWindow cSControlsWindow = new CSControlsWindow();
+            cSControlsWindow.ShowDialog();
         }
     }
 }

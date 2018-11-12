@@ -8,9 +8,14 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Label
             Name="mainLabel"
             Content="Hello"
@@ -18,6 +23,7 @@
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             Grid.Row="0"
+            Grid.Column="0"
             />
         <Button
             Name="mainButton"
@@ -25,6 +31,31 @@
             FontSize="64"
             Click="mainButton_Click"
             Grid.Row="1"
+            Grid.Column="0"
             />
+        <TextBox
+            Name="mainTextBox"
+            Grid.Row="2"
+            Grid.Column="0"
+            />
+        <Label
+            Content="Sections:"
+            FontSize="64"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Grid.Row="0"
+            Grid.Column="1"
+            />
+        <StackPanel
+            Grid.Column="1"
+            Grid.Row="1"
+            Grid.RowSpan="2">
+
+            <Button
+                Name="cSControlsButton"
+                Content="CSControls"
+                Margin="15"
+                Click="cSControlsButton_Click"/>
+        </StackPanel>
     </Grid>
 </Window>
